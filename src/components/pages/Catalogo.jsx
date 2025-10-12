@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../organisms/Header'
+import Producto from '../organisms/Producto'
 
 export default function catalogo() {
   return (
