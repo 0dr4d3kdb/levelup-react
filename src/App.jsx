@@ -1,8 +1,8 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Catalogo from './components/pages/Catalogo'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <BrowserRouter>
