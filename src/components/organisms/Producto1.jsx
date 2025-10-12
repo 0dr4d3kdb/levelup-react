@@ -1,12 +1,11 @@
 import React from 'react'
 
-export default function Producto() {
+export default function Producto1() {
   return (
-  
     <div className="producto">
         <a href="#">
             <div className="productolink">
-                <img src="carcassonne.jpg" alt="carcassonne"/>
+                <img src="/images/carcassonne.jpg" alt="carcassonne"/>
                 <div className="prod">
                     <p className="nombreprod">Juego Carcassonne</p>
                 </div>
@@ -19,6 +18,5 @@ export default function Producto() {
         aprender.</p>
         <button type="button" className="agregar">Agregar al carro</button>
     </div>
-  
   )
 }

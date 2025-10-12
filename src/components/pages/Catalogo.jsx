@@ -1,10 +1,12 @@
 import React from 'react'
-import Producto from '../organisms/Producto'
+import Producto1 from '../organisms/Producto1'
+import Producto2 from '../organisms/Producto2'
 
 export default function Catalogo() {
   return (
     <>
-        <Producto/>
+        <Producto1/>
+        <Producto2/>
     </>
   )
 }
