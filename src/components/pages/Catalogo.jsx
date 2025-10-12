@@ -4,7 +4,7 @@ import Header from '../organisms/Header'
 export default function catalogo() {
   return (
     <>
-        <Header/>
+        <Producto/>
     </>
   )
 }
