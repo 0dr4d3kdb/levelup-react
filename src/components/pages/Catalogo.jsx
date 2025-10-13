@@ -9,21 +9,27 @@ import Producto7 from '../organisms/Producto7'
 import Producto8 from '../organisms/Producto8'
 import Producto9 from '../organisms/Producto9'
 import Producto10 from '../organisms/Producto10'
+import Header from '../organisms/Header'
 
 export default function Catalogo() {
   return (
-    <div id="productos">
-      <Producto1/>
-      <Producto2/>
-      <Producto3/>
-      <Producto4/>
-      <Producto5/>
-      <Producto6/>
-      <Producto7/>
-      <Producto8/>
-      <Producto9/>
-      <Producto10/>
-    </div>
+    <>
+      <div>
+        <Header/>
+      </div>
+      <div id="productos">
+        <Producto1/>
+        <Producto2/>
+        <Producto3/>
+        <Producto4/>
+        <Producto5/>
+        <Producto6/>
+        <Producto7/>
+        <Producto8/>
+        <Producto9/>
+        <Producto10/>
+      </div>
+    </>
     
   )
 }
