@@ -6,11 +6,9 @@ function App() {
 
   return (
     <BrowserRouter>
-
       <Routes>
         <Route path='/catalogo' element={<Catalogo/>}/>
       </Routes>
-      
     </BrowserRouter>
   )
 }
