@@ -10,6 +10,7 @@ import Producto8 from '../organisms/Producto8'
 import Producto9 from '../organisms/Producto9'
 import Producto10 from '../organisms/Producto10'
 import Header from '../organisms/Header'
+import Filtros from '../organisms/Filtros'
 
 export default function Catalogo() {
   return (
@@ -17,6 +18,8 @@ export default function Catalogo() {
       <div>
         <Header/>
       </div>
+<div id="seccion2">
+      <Filtros/>
       <div id="productos">
         <Producto1/>
         <Producto2/>
@@ -29,6 +32,7 @@ export default function Catalogo() {
         <Producto9/>
         <Producto10/>
       </div>
+</div>
     </>
     
   )
