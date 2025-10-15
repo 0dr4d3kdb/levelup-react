@@ -18,21 +18,21 @@ export default function Catalogo() {
       <div>
         <Header/>
       </div>
-<div id="seccion2">
-      <Filtros/>
-      <div id="productos">
-        <Producto1/>
-        <Producto2/>
-        <Producto3/>
-        <Producto4/>
-        <Producto5/>
-        <Producto6/>
-        <Producto7/>
-        <Producto8/>
-        <Producto9/>
-        <Producto10/>
+      <div id="seccion2">
+        <Filtros/>
+        <div id="productos">
+          <Producto1/>
+          <Producto2/>
+          <Producto3/>
+          <Producto4/>
+          <Producto5/>
+          <Producto6/>
+          <Producto7/>
+          <Producto8/>
+          <Producto9/>
+          <Producto10/>
+            </div>
       </div>
-</div>
     </>
     
   )
