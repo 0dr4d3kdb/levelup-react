@@ -1,37 +1,23 @@
 import React from 'react'
 import Producto1 from '../organisms/Producto1'
-import Producto2 from '../organisms/Producto2'
-import Producto3 from '../organisms/Producto3'
-import Producto4 from '../organisms/Producto4'
-import Producto5 from '../organisms/Producto5'
-import Producto6 from '../organisms/Producto6'
-import Producto7 from '../organisms/Producto7'
-import Producto8 from '../organisms/Producto8'
-import Producto9 from '../organisms/Producto9'
-import Producto10 from '../organisms/Producto10'
-import Header from '../organisms/Header'
 import Filtros from '../organisms/Filtros'
 
 export default function Catalogo() {
   return (
     <>
-      <div>
-        <Header/>
-      </div>
       <div id="seccion2">
         <Filtros/>
         <div id="productos">
-          <Producto1/>
-          <Producto2/>
-          <Producto3/>
-          <Producto4/>
-          <Producto5/>
-          <Producto6/>
-          <Producto7/>
-          <Producto8/>
-          <Producto9/>
-          <Producto10/>
-            </div>
+          <Producto1
+            code="1"
+            image="/images/carcassonne.jpg"
+            name="Carcassonne"
+            description="Un clásico juego de estrategia donde los jugadores compiten por colonizar y
+                expandirse en la isla de Catan. Ideal para 3-4 jugadores y perfecto para noches de juego en
+                familia o con amigos."
+            category="Juegos de mesa"
+            price="$39.990"/>
+        </div>
       </div>
     </>
     

@@ -1,21 +1,20 @@
 import React from 'react'
 
-export default function Producto1() {
+export default function Producto1(props) {
+  const {code, image, name, price, description, category} = props
   return (
     <div className="producto">
         <a href="#">
             <div className="productolink">
-                <img src="/images/carcassonne.jpg" alt="carcassonne"/>
+                <div className="imagenProducto" style={{backgroundImage: `url(${image})`}}></div>
                 <div className="prod">
-                    <p className="nombreprod">Juego Carcassonne</p>
+                    <p className="nombreprod">{name}</p>
                 </div>
             </div>
         </a>
-        <p className="precio">$24.990 clp</p>
-        <p className="categoria">Categoría<br/>Juegos de Mesa</p>
-        <p className="descripcion">Un juego de colocación de fichas donde los jugadores construyen el paisaje
-        alrededor de la fortaleza medieval de Carcassonne. Ideal para 2-5 jugadores y fácil de
-        aprender.</p>
+        <p className="precio">{price}</p>
+        <p className="categoria">Categoría<br/>{category}</p>
+        <p className="descripcion">{description}</p>
         <button type="button" className="agregar">Agregar al carro</button>
     </div>
   )
