@@ -128,7 +128,7 @@ header{
 
 #seccion2{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-direction: row;
     width: 100%;
@@ -234,8 +234,8 @@ header{
     flex-wrap: wrap;
     column-gap: 2rem;
     row-gap: 2rem;
-    width: 280px;
-    height: 750px;
+    width: 290px;
+    height: 770px;
     border: solid #39FF14 1px;
     background-color: #1a1a1a;
     border-radius: 15px;
@@ -299,15 +299,14 @@ header{
 }
 
 #filtros {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  height: fit-content;
-  width: 20%;
-  background-color: #1a1a1a;
-  border-radius: 15px;
-  
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+    width: 20%;
+    background-color: #1a1a1a;
+    border-radius: 15px;
 }
 
 .categoria{
