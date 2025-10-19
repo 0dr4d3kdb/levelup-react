@@ -9,8 +9,8 @@ export default function
             </div>
             <nav id="catalogonav">
                 <a href="index.html">Inicio</a>
-                <a href="catalogo.html">Catalogo</a>
-                <a href="aboutus.html">Nosotros</a>
+                <a href="catalogo">Catalogo</a>
+                <a href="aboutus">Nosotros</a>
                 <a href="#">Blog</a>
             </nav>
             <div id="extra">
