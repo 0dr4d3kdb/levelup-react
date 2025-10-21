@@ -560,6 +560,150 @@ button.agregar:hover {
     text-align: center;
 }
 
+
+:root {
+    --bg-color: #000000;
+    --primary-text-color: #FFFFFF;
+    --secondary-text-color: #D3D3D3;
+    --accent-blue: #1E90FF;
+    --accent-green: #39FF14;
+    --font-principal: 'Roboto', sans-serif;
+    --font-encabezado: 'Orbitron', sans-serif;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-principal);
+    background-color: var(--bg-color);
+    color: var(--primary-text-color);
+    line-height: 1.6;
+}
+
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 7rem;
+}
+header a {
+    color: var(--primary-text-color); 
+    text-decoration: none;            
+    font-family: var(--font-encabezado);
+}
+
+#logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+    width: 20%;
+}
+
+#logo > img{
+    height: 110px;
+    padding-left: 2rem;
+}
+#catalogonav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 3rem;
+    padding-right: 5rem;
+    width: 70%;
+}
+
+#catalogonav > a{
+    padding: 1rem;
+    border-radius: 5px;
+    font-family: Orbitron;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#catalogonav > a:hover{
+    background: linear-gradient(to right, #1E90FF, #39FF14);
+    transform: scale(1.05);
+}
+
+#extra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 3rem;
+    padding-left: 5rem;
+    width: 30%;
+}
+
+#extra > a{
+    padding: 1rem;
+    border-radius: 5px;
+    font-family: Orbitron;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#extra > a:hover {
+    background-color: var(--accent-green);
+    transform: scale(1.05);
+}
+
+#extra > a:hover{
+    background: linear-gradient(to right, #1E90FF, #39FF14)
+}
+
+#seccion1{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #ff0000, #006900, #0000ff);
+    margin-bottom: 2rem;
+}
+
+#background{
+    height: 96%;
+    width: 99%;
+    background-image: url('https://raw.githubusercontent.com/0dr4d3kdb/proyectofullstack1/a998f004585f2377fc7ea88e2dae116bd8ee0fb2/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-blue);
+}
+
+.main-content {
+    padding: 50px;
+    text-align: center;
+}
+
 .section-title {
     font-family: var(--font-encabezado);
     font-size: 2.5em;
@@ -570,7 +714,7 @@ button.agregar:hover {
 
 .product-grid {
    display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -597,7 +741,7 @@ button.agregar:hover {
 
 .product-card img {
   width: 100%;
-    height: 200px; /* Altura fija para las imágenes */
+    height: 200px;
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 15px;
@@ -614,19 +758,19 @@ button.agregar:hover {
 .product-card .description {
     color: var(--secondary-text-color);
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
 }
 
 .product-card .price {
     font-size: 1.8em;
     font-weight: bold;
     color: var(--accent-green);
-    margin-bottom: 20px;
-    margin-bottom: 40px; /* Aumentamos el margen inferior del precio */
+    margin-bottom: 40px; 
     position: absolute;
-    bottom: 60px; /* Posicionamos el precio justo arriba del botón */
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
+    margin: 0;
 }
 
 .buy-button {
@@ -638,11 +782,9 @@ button.agregar:hover {
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
      position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 20px; 
+    
 }
 
 .buy-button:hover {
@@ -687,4 +829,126 @@ button.agregar:hover {
 .banner-content .btn:hover {
   background: var(--accent-blue);
   color: #fff;
+}
+
+
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid var(--accent-green);
+    color: var(--secondary-text-color);
+    margin-top: 50px;
+}
+/*Login */
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.form-card {
+  background-color: #1a1a1a;
+  border: 2px solid var(--accent-green);
+  border-radius: 15px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0px 8px 20px rgba(30, 144, 255, 0.2);
+  text-align: center;
+}
+
+.form-card h2 {
+  font-family: var(--font-encabezado);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--accent-blue);
+  text-shadow: 0px 0px 8px rgba(30, 144, 255, 0.6);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: var(--secondary-text-color);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--accent-blue);
+  border-radius: 8px;
+  background-color: #0b0b0b;
+  color: var(--primary-text-color);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: var(--accent-green);
+  box-shadow: 0px 0px 8px rgba(57, 255, 20, 0.6);
+}
+
+.form-btn {
+  background: linear-gradient(to right, var(--accent-blue), var(--accent-green));
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.form-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(57, 255, 20, 0.5);
+}
+
+.switch-form {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: var(--secondary-text-color);
+}
+
+.switch-form a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.switch-form a:hover {
+  color: var(--accent-green);
+}
+.input-error {
+  display: block;
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+.input-invalid {
+  box-shadow: 0 0 0 4px rgba(255,107,107,0.08);
+  border-color: #ff6b6b !important;
 }
