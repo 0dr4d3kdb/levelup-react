@@ -5,6 +5,7 @@ import Header from './components/organisms/Header'
 import Resena from './components/pages/Resena'
 import AboutUs from './components/pages/AboutUs'
 import Footer from './components/organisms/Footer'
+import Home from './components/pages/Home'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     <Header/>
     <BrowserRouter>
       <Routes>
+        <Route path='/' element={<Home/>}/>
         <Route path='/catalogo' element={<Catalogo/>}/>
         <Route path='/resena' element={<Resena/>}/>
         <Route path='/aboutus' element={<AboutUs/>}/>
