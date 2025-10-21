@@ -8,7 +8,7 @@ export default function
                 <img src="https://raw.githubusercontent.com/0dr4d3kdb/proyectofullstack1/a998f004585f2377fc7ea88e2dae116bd8ee0fb2/Level-Up.png" alt="Level-Up" />
             </div>
             <nav id="catalogonav">
-                <a href="index.html">Inicio</a>
+                <a href="/">Inicio</a>
                 <a href="catalogo">Catalogo</a>
                 <a href="aboutus">Nosotros</a>
                 <a href="#">Blog</a>
