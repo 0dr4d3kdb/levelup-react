@@ -5,6 +5,8 @@ import './App.css'
 import Home from './components/pages/Home'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/organisms/Header'
+import Login from './components/pages/Login'
+import Registro from './components/pages/Registro'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +19,8 @@ function App() {
       <Link to='/about'>About</Link> */}
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/registro' element={<Registro/>}/>
       </Routes>
     </BrowserRouter>
     </>
