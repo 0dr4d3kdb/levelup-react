@@ -4,7 +4,7 @@ export default function Producto1(props) {
   const {code, image, name, price, description, category} = props
   return (
     <div className="producto">
-        <a href="#">
+        <a href="/resena">
             <div className="productolink">
                 <div className="imagenProducto" style={{backgroundImage: `url(${image})`}}></div>
                 <div className="prod">
