@@ -53,8 +53,9 @@ header a {
     width: 20%;
 }
 
-#logo > img{
+#logo  img{
     height: 110px;
+    width: auto;
     padding-left: 2rem;
 }
 #catalogonav{
@@ -396,4 +397,43 @@ header a {
 .input-invalid {
   box-shadow: 0 0 0 4px rgba(255,107,107,0.08);
   border-color: #ff6b6b !important;
+}
+
+/*perfil*/
+
+.perfil-container {
+    max-width: 400px;
+    margin: 60px auto;
+    background: #1a1a1a;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 20px #1E90FF44;
+    text-align: center;
+}
+.perfil-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid var(--accent-green);
+}
+.perfil-nombre {
+    font-family: var(--font-encabezado);
+    font-size: 1.7em;
+    color: var(--accent-blue);
+    margin-bottom: 10px;
+}
+.perfil-email {
+    color: var(--secondary-text-color);
+    margin-bottom: 25px;
+}
+.perfil-puntos {
+    background: linear-gradient(to right, var(--accent-blue), var(--accent-green));
+    color: #000;
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px #39FF1444;
 }

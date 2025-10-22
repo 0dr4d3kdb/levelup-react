@@ -7,6 +7,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/organisms/Header'
 import Login from './components/pages/Login'
 import Registro from './components/pages/Registro'
+import PerfilPage from './components/pages/PerfilPage'
+import CarritoPage from './components/pages/CarritoPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +23,8 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/registro' element={<Registro/>}/>
+        <Route path='/perfil' element={<PerfilPage/>}/>
+        <Route path='/carrito' element={<CarritoPage/>}/>
       </Routes>
     </BrowserRouter>
     </>
