@@ -1,7 +1,7 @@
 import React from 'react'
-import Producto1 from '../organisms/Producto'
 import Filtros from '../organisms/Filtros'
 import Buscador from '../molecules/Buscador'
+import Producto from '../organisms/Producto'
 
 export default function Catalogo() {
   return (

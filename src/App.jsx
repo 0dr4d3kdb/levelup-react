@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/organisms/Header'
 import Login from './components/pages/Login'
 import Registro from './components/pages/Registro'
+import Catalogo from './components/pages/Catalogo'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +22,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/registro' element={<Registro/>}/>
+        <Route path='/catalogo' element={<Catalogo/>}/>
       </Routes>
     </BrowserRouter>
     </>

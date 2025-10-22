@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Producto1(props) {
+export default function Producto(props) {
   const {code, image, name, price, description, category} = props
   return (
     <div className="producto">
