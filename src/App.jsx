@@ -8,6 +8,7 @@ import Header from './components/organisms/Header'
 import Login from './components/pages/Login'
 import Registro from './components/pages/Registro'
 import Catalogo from './components/pages/Catalogo'
+import Resena from './components/pages/Resena'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,6 +24,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/registro' element={<Registro/>}/>
         <Route path='/catalogo' element={<Catalogo/>}/>
+        <Route path='/resena' element={<Resena/>}/>
       </Routes>
     </BrowserRouter>
     </>

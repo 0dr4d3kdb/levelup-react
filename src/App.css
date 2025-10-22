@@ -668,3 +668,74 @@ header a {
     width: 100%;  
     padding-left: 3rem;
 }
+
+/* Reseña estilo */
+
+.resena-container {
+    width: 80%;
+    margin: auto;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+}
+
+.resena-titulo {
+    font-family: Orbitron, sans-serif;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.resena-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.resena-imagen img {
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+.resena-detalles {
+    flex: 2;
+    min-width: 300px;
+    color: #d3d3d3;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.resena-detalles h3 {
+    font-family: Orbitron, sans-serif;
+    margin-top: 1.5rem;
+    color: #fff;
+}
+
+.resena-detalles ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    line-height: 1.6;
+}
+
+.precio {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    color: #00ff99;
+}
+
+button.agregar {
+    background-color: #00ff99;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    /* transition: background 0.3s ease; */
+}
+
+button.agregar:hover {
+    background-color: #00cc7a;
+}
