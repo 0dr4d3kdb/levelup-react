@@ -29,7 +29,7 @@ export default function Catalogo() {
             category="Juegos de mesa"
             price="$24.990 clp"/>
           <Producto
-            code="4"
+            code="3"
             image="/images/control-xbox.jpg"
             name="Auriculares Gamer HyperX Cloud II"
             description="Ofrece una experiencia de juego cómoda con
@@ -38,7 +38,7 @@ export default function Catalogo() {
             category="Accesorios"
             price="$59.990 clp"/>
           <Producto
-            code="3"
+            code="4"
             image="/images/audifonos.jpg"
             name="Controlador Inalámbrico Xbox Series X"
             description="Proporcionan un sonido envolvente de calidad con un
