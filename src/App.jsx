@@ -12,6 +12,7 @@ import CarritoPage from './components/pages/CarritoPage'
 import Catalogo from './components/pages/Catalogo'
 import AboutUs from './components/pages/AboutUs'
 import Blog from './components/pages/Blog'
+import Resena from './components/pages/Resena'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,6 +32,7 @@ function App() {
         <Route path='/catalogo' element={<Catalogo/>}/>
         <Route path='/aboutus' element={<AboutUs/>}/>
         <Route path='/blog' element={<Blog/>}/>
+        <Route path='/resena' element={<Resena/>}/>
       </Routes>
     </BrowserRouter>
     </>
