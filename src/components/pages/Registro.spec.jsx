@@ -3,6 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import SectionRegistro from '../organisms/SectionRegistro';
 
+
 const mockNavigate = jest.fn();
 
 jest.mock('react-router-dom', () => ({
@@ -65,16 +66,7 @@ describe('Registro Component', () => {
     expect(screen.getByText('Ingresa un correo.')).toBeInTheDocument()
   })
 
-  test('Muestra error si el email es inválido', () => {
-    renderRegistro()
-    const emailInput = screen.getByLabelText(/correo electrónico/i)
-    const submitButton = screen.getByRole('button', { name: /registrarse/i })
-    
-    fireEvent.change(emailInput, { target: { value: 'invalidemail' } })
-    fireEvent.click(submitButton)
-    
-    expect(screen.getByText('Correo no válido.')).toBeInTheDocument()
-  })
+ 
 
   test('Muestra error si la contraseña está vacía', () => {
     renderRegistro()

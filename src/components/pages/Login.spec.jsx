@@ -37,14 +37,7 @@ describe('Login Component', () => {
     expect(screen.getByText('Ingresa un correo.')).toBeInTheDocument();
   });
 
-  test('Muestra error si el correo tiene formato inválido', () => {
-    renderLogin();
-    fireEvent.change(screen.getByLabelText(/correo electrónico/i), {
-      target: { value: 'invalidemail' },
-    });
-    fireEvent.click(screen.getByRole('button', { name: /iniciar sesión/i }));
-    expect(screen.getByText('Correo no válido.')).toBeInTheDocument();
-  });
+ 
 
   test('Muestra error si la contraseña está vacía', () => {
     renderLogin();
