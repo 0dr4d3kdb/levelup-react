@@ -10,8 +10,8 @@ export default function Footer() {
                 <span>Level-UP Gamer</span>
             </div>
             <div className="footer-social">
-                <a href="#" title="Instagram"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" height="28"/></a>
-                <a href="#" title="Twitter"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" height="28"/></a>
+                <a href="https://www.instagram.com/santiago_delvis/" title="Instagram"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" height="28"/></a>
+                <a href="https://x.com/Sivled3" title="Twitter"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" height="28"/></a>
                 <a href="#" title="Facebook"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" height="28"/></a>
             </div>
         </div>

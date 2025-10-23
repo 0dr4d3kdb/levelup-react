@@ -6,7 +6,7 @@ export default function
         <header>
             <div id="logo">
                 <a href="/">
-                    <img src="https://raw.githubusercontent.com/0dr4d3kdb/proyectofullstack1/a998f004585f2377fc7ea88e2dae116bd8ee0fb2/Level-Up.png" alt="Level-Up" />
+                    <img src="images/Level-Up.png" alt="Level-Up" />
                 </a>
             </div>
             <nav id="catalogonav">

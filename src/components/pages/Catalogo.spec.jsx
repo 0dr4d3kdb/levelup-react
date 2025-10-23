@@ -1,12 +1,13 @@
 import { fireEvent, render, screen } from "@testing-library/react"
 import Catalogo from "./Catalogo"; 
 import React from "react";
-import { vi } from "vitest";
+import Product from "../organisms/Product";
+import Producto from "../organisms/Producto";
 
 beforeEach(()=>{
-    Storage.prototype.getItem = vi.fn(
+    Storage.prototype.getItem = jest.fn(
         ()=> JSON.stringify([]))
-    Storage.prototype.setItem = vi.fn()
+    Storage.prototype.setItem = jest.fn()
 })
 
 describe('Catalogo component', ()=>{
@@ -27,8 +28,8 @@ describe('Catalogo component', ()=>{
     })
 
         it('Se invoca al localStorage al clickear en botón', () => {
-        render(<Catalogo {...mockProduct} />)
-        const button = screen.getByText("Añadir al carrito")
+        render(<Producto {...mockProduct} />)
+        const button = screen.getByText("Agregar al carro")
         fireEvent.click(button)
         expect(localStorage.setItem).toHaveBeenCalledWith(
             'products', JSON.stringify([mockProduct])
