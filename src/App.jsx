@@ -13,6 +13,7 @@ import Catalogo from './components/pages/Catalogo'
 import AboutUs from './components/pages/AboutUs'
 import Blog from './components/pages/Blog'
 import Resena from './components/pages/Resena'
+import Footer from './components/organisms/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -35,6 +36,7 @@ function App() {
         <Route path='/resena' element={<Resena/>}/>
       </Routes>
     </BrowserRouter>
+    <Footer/>
     </>
   )
 }

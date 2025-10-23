@@ -888,3 +888,61 @@ button.agregar:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 25px rgba(57, 255, 20, 0.3);
 }
+
+/* Footer style */
+
+.footer {
+    width: 100%;
+    left: 0;
+    position: relative;
+    background: linear-gradient(to right, #1E90FF 60%, #39FF14 100%);
+    color: #fff;
+    padding: 30px 0 10px 0;
+    margin-top: 50px;
+    font-family: 'Roboto', sans-serif;
+    border-top: none;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+    gap: 2rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social img {
+    filter: drop-shadow(0 0 4px #000);
+    transition: transform 0.2s;
+}
+
+.footer-social a:hover img {
+    transform: scale(1.15);
+}
+
+.footer-copy {
+    text-align: center;
+    color: #222;
+    font-size: 1rem;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    opacity: 0.8;
+}

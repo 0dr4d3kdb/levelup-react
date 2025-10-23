@@ -46,6 +46,23 @@ export default function Catalogo() {
                 durante largas sesiones de juego."
             category="Accesorios"
             price="$79.990 clp"/>
+          <Producto
+            code="5"
+            image="/images/play5.jpg"
+            name="Play Station 5"
+            description="a consola de última generación de Sony, que ofrece gráficos
+                impresionantes y tiempos de carga ultrarrápidos para una experiencia de juego inmersiva."
+            category="Consolas"
+            price="$549.990 clp"/>
+          <Producto
+            code="6"
+            image="/images/pcasus.png"
+            name="PC Gamer ASUS ROG Strix"
+            description="Un potente equipo diseñado para los gamers más exigentes,
+                equipado con los últimos componentes para ofrecer un rendimiento excepcional en
+                cualquier juego."
+            category="Computadores Gamers"
+            price="$1.299.990 clp"/>
 
         </div>
       </div>
