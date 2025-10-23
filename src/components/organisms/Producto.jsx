@@ -1,5 +1,12 @@
 import React from 'react'
 
+function addToCart(product){
+  const products = JSON.parse(localStorage.getItem('products')) || []
+  console.log(products)
+  products.push(product)
+  localStorage.setItem('products',JSON.stringify(products))
+}
+
 export default function Producto(props) {
   const {code, image, name, price, description, category} = props
   return (
@@ -15,7 +22,7 @@ export default function Producto(props) {
         <p className="precio">{price}</p>
         <p className="categoria">Categoría<br/>{category}</p>
         <p className="descripcion">{description}</p>
-        <button type="button" className="agregar">Agregar al carro</button>
+        <button type="button" className="agregar" onClick={()=>addToCart(props)}>Agregar al carro</button>
     </div>
   )
 }

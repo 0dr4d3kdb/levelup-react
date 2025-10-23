@@ -9,6 +9,8 @@ import Login from './components/pages/Login'
 import Registro from './components/pages/Registro'
 import Catalogo from './components/pages/Catalogo'
 import Resena from './components/pages/Resena'
+import AboutUs from './components/pages/AboutUs'
+import Blog from './components/pages/Blog'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,6 +27,8 @@ function App() {
         <Route path='/registro' element={<Registro/>}/>
         <Route path='/catalogo' element={<Catalogo/>}/>
         <Route path='/resena' element={<Resena/>}/>
+        <Route path='aboutus' element={<AboutUs/>}/>
+        <Route path='/blog' element={<Blog/>}/>
       </Routes>
     </BrowserRouter>
     </>
