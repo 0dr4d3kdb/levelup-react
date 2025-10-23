@@ -13,7 +13,7 @@ export default function
                 <a href="/">Inicio</a>
                 <a href="/catalogo">Catalogo</a>
                 <a href="/aboutus">Nosotros</a>
-                <a href="#">Blog</a>
+                <a href="/blog">Blog</a>
             </nav>
             <div id="extra">
                 <a href="carrito"> Carro 🛒 </a>

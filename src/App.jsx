@@ -9,6 +9,7 @@ import Login from './components/pages/Login'
 import Registro from './components/pages/Registro'
 import PerfilPage from './components/pages/PerfilPage'
 import CarritoPage from './components/pages/CarritoPage'
+import Catalogo from './components/pages/Catalogo'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,6 +26,7 @@ function App() {
         <Route path='/registro' element={<Registro/>}/>
         <Route path='/perfil' element={<PerfilPage/>}/>
         <Route path='/carrito' element={<CarritoPage/>}/>
+        <Route path='/catalogo' element={<Catalogo/>}/>
       </Routes>
     </BrowserRouter>
     </>
