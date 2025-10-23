@@ -34,7 +34,6 @@ export default function SectionLogin() {
   };
 
   return (
-    <div id="Login">
       <section className="form-container">
         <div className="form-card">
           <h2>Iniciar Sesión</h2>
@@ -69,10 +68,9 @@ export default function SectionLogin() {
           </form>
 
           <p className="switch-form">
-            ¿No tienes cuenta? <a href="registro">Regístrate</a>
+            ¿No tienes cuenta? <Link to="/registro">Regístrate</Link>
           </p>
         </div>
       </section>
-    </div>
   );
 }

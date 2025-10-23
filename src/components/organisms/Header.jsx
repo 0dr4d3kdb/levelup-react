@@ -16,7 +16,7 @@ export default function
                 <a href="#">Blog</a>
             </nav>
             <div id="extra">
-                <a href="carrito">Carro</a>
+                <a href="carrito"> Carro 🛒 </a>
                 <a href="perfil">Usuario</a>
                 <a href='login' >Iniciar Sesión</a>
             </div>
