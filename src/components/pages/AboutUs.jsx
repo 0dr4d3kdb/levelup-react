@@ -8,9 +8,5 @@ export default function AboutUs() {
         <Encuentranos/>
         <Ubicacion/>
     </div>
-    // <>   
-    //     {/* <Encuentranos/> */}
-    //     <Ubicacion/>
-    // </>
   )
 }

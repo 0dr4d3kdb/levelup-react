@@ -10,6 +10,8 @@ import Registro from './components/pages/Registro'
 import PerfilPage from './components/pages/PerfilPage'
 import CarritoPage from './components/pages/CarritoPage'
 import Catalogo from './components/pages/Catalogo'
+import AboutUs from './components/pages/AboutUs'
+import Blog from './components/pages/Blog'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,6 +29,8 @@ function App() {
         <Route path='/perfil' element={<PerfilPage/>}/>
         <Route path='/carrito' element={<CarritoPage/>}/>
         <Route path='/catalogo' element={<Catalogo/>}/>
+        <Route path='/aboutus' element={<AboutUs/>}/>
+        <Route path='/blog' element={<Blog/>}/>
       </Routes>
     </BrowserRouter>
     </>
