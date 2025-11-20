@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom';
+import axios from 'axios';
 
 export default function SectionLogin() {
     const navigate = useNavigate();
@@ -7,29 +8,24 @@ export default function SectionLogin() {
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
 
-  const validate = () => {
-    const newErrors = {};
-
-    if (!email.trim()) {
-      newErrors.email = 'Ingresa un correo.';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      newErrors.email = 'Correo no válido.';
-    }
-
-    if (!password.trim()) {
-      newErrors.password = 'Ingresa la contraseña.';
-    } else if (password.length < 6) {
-      newErrors.password = 'Mínimo 6 caracteres.';
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validate()) {
-      navigate('/');
+    try {
+      const res = await axios.post("http://localhost:8181/api/auth/login", {
+        correo: email,
+        password: password,
+      });
+
+      const data = res.data; // tu backend devuelve un String
+      if (data.includes("Login exitoso")) {
+        alert(data);
+        navigate("/"); // redirige a la página principal
+      } else {
+        setError(data); // "Credenciales inválidas."
+      }
+    } catch (err) {
+      console.error("Error en login:", err);
+      setError("Error al conectar con el servidor");
     }
   };
 

@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom';
+import axios from 'axios';
 
 export default function SectionRegistro() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const validate = () => {
     const newErrors = {};
@@ -33,10 +35,28 @@ export default function SectionRegistro() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validate()) {
-      navigate('/login');
+      setLoading(true);
+      try {
+        const res = await axios.post("http://localhost:8181/api/auth/registro", {
+          nombre: username,   // tu backend espera "nombre"
+          correo: email,      // tu backend espera "correo"
+          password: password, // tu backend espera "password"
+        });
+
+        alert(res.data); // "Usuario registrado correctamente" o "El correo ya está registrado"
+
+        if (res.data.includes("correctamente")) {
+          navigate("/login");
+        }
+      } catch (error) {
+        console.error("Error en el registro:", error);
+        alert("No se pudo registrar el usuario");
+      } finally {
+        setLoading(false);
+      }
     }
   };
 
@@ -85,11 +105,13 @@ export default function SectionRegistro() {
               {errors.password && <span className="input-error">{errors.password}</span>}
             </div>
 
-            <button type="submit" className="form-btn">Registrarse</button>
+            <button type="submit" className="form-btn" disabled={loading}>
+              {loading ? "Registrando..." : "Registrarse"}
+            </button>
           </form>
 
           <p className="switch-form">
-            ¿Ya tienes cuenta? <a href="login">Inicia sesión</a>
+            ¿Ya tienes cuenta? <Link to="/login">Inicia sesión</Link>
           </p>
         </div>
       </section>
