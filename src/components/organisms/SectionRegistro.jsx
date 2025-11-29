@@ -43,13 +43,17 @@ export default function SectionRegistro() {
         const res = await axios.post("http://localhost:8181/api/auth/registro", {
           nombre: username,   // tu backend espera "nombre"
           correo: email,      // tu backend espera "correo"
-          password: password, // tu backend espera "password"
+          password: password, 
+        }, { responseType: 'text'
         });
 
-        alert(res.data); // "Usuario registrado correctamente" o "El correo ya está registrado"
+        // "Usuario registrado correctamente" o "El correo ya está registrado"
 
-        if (res.data.includes("correctamente")) {
-          navigate("/login");
+        if (res.data === "Usuario registrado correctamente") {
+          alert(res.data);       // muestra el mensaje correcto
+          navigate("/login");    // redirige al login
+        } else {
+          alert(res.data);       // muestra el mensaje de error
         }
       } catch (error) {
         console.error("Error en el registro:", error);

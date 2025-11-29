@@ -19,7 +19,7 @@ export default function Producto(props) {
                 </div>
             </div>
         </a>
-        <p className="precio">{price}</p>
+        <p className="precio">${price}</p>
         <p className="categoria">Categoría<br/>{category}</p>
         <p className="descripcion">{description}</p>
         <button type="button" className="agregar" onClick={()=>addToCart(props)}>Agregar al carro</button>

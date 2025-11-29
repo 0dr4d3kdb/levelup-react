@@ -6,7 +6,7 @@ export default function SectionLogin() {
     const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [errors, setErrors] = useState({});
+  const [errors, setError] = useState({});
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,8 +17,8 @@ export default function SectionLogin() {
       });
 
       const data = res.data; // tu backend devuelve un String
-      if (data.includes("Login exitoso")) {
-        alert(data);
+      if (data.token) {
+        alert("Login exitoso");
         navigate("/"); // redirige a la página principal
       } else {
         setError(data); // "Credenciales inválidas."

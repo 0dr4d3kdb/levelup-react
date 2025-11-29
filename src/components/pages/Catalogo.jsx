@@ -1,69 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Filtros from '../organisms/Filtros'
 import Buscador from '../molecules/Buscador'
 import Producto from '../organisms/Producto'
+import axios from 'axios'
 
 export default function Catalogo() {
+  const [productos, setProductos] = useState([])
+
+  useEffect(() => {
+    axios.get("http://localhost:8181/api/productos")
+      .then(res => setProductos(res.data))
+      .catch(err => console.error("Error al obtener productos:", err))
+  }, [])
+  const idsPermitidos = [5,6,7,8,9,10] 
+  const productosFiltrados = productos.filter(p => idsPermitidos.includes(p.id))
   return (
     <>
       <Buscador/>
       <div id="seccion2">
         <Filtros/>
         <div id="productos">
-          <Producto
-            code="1"
-            image="/images/catan.jpg"
-            name="Catan"
-            description="Un clásico juego de estrategia donde los jugadores compiten por colonizar y
-                expandirse en la isla de Catan. Ideal para 3-4 jugadores y perfecto para noches de juego en
-                familia o con amigos."
-            category="Juegos de mesa"
-            price="$29.990 clp"/>
-          <Producto
-            code="2"
-            image="/images/carcassonne.jpg"
-            name="Carcassonne"
-            description="Un juego de colocación de fichas donde los jugadores construyen el paisaje
-                alrededor de la fortaleza medieval de Carcassonne. Ideal para 2-5 jugadores y fácil de
-                aprender."
-            category="Juegos de mesa"
-            price="$24.990 clp"/>
-          <Producto
-            code="3"
-            image="/images/control-xbox.jpg"
-            name="Auriculares Gamer HyperX Cloud II"
-            description="Ofrece una experiencia de juego cómoda con
-                botones mapeables y una respuesta táctil mejorada. 
-                Compatible con consolas Xbox y PC."
-            category="Accesorios"
-            price="$59.990 clp"/>
-          <Producto
-            code="4"
-            image="/images/audifonos.jpg"
-            name="Controlador Inalámbrico Xbox Series X"
-            description="Proporcionan un sonido envolvente de calidad con un
-                micrófono desmontable y almohadillas de espuma viscoelástica para mayor comodidad
-                durante largas sesiones de juego."
-            category="Accesorios"
-            price="$79.990 clp"/>
-          <Producto
-            code="5"
-            image="/images/play5.jpg"
-            name="Play Station 5"
-            description="a consola de última generación de Sony, que ofrece gráficos
-                impresionantes y tiempos de carga ultrarrápidos para una experiencia de juego inmersiva."
-            category="Consolas"
-            price="$549.990 clp"/>
-          <Producto
-            code="6"
-            image="/images/pcasus.png"
-            name="PC Gamer ASUS ROG Strix"
-            description="Un potente equipo diseñado para los gamers más exigentes,
-                equipado con los últimos componentes para ofrecer un rendimiento excepcional en
-                cualquier juego."
-            category="Computadores Gamers"
-            price="$1.299.990 clp"/>
-
+          {productosFiltrados.map(p => (
+           <Producto
+           code={p.id}
+           image={p.imagenUrl}       
+           name={p.nombre}        
+           description={p.descripcion}
+           category={p.categoria}
+           price={p.precio.toLocaleString("es-CL")}
+         />
+          ))}
         </div>
       </div>
     </>
