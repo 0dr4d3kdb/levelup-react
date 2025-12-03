@@ -7,7 +7,12 @@ export default function Home() {
   const [productos, setProductos] = useState([])
 
   useEffect(() => {
-    axios.get("http://localhost:8181/api/productos")
+    const token = localStorage.getItem("token");
+    axios.get("http://localhost:8181/api/productos", {
+      headers: {
+        "Authorization": `Bearer ${token}`
+      }
+    })
       .then(res => setProductos(res.data))
       .catch(err => console.error("Error al obtener productos:", err))
   }, [])

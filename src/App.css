@@ -946,3 +946,309 @@ button.agregar:hover {
     font-family: 'Roboto', sans-serif;
     opacity: 0.8;
 }
+/* Contenedor principal */
+.dashboard {
+  max-width: 1200px;
+  margin: 3rem auto;
+  background: #0b0b0b;
+  border: 2px solid var(--accent-green);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 0 25px rgba(30,144,255,0.4);
+}
+
+/* Encabezado */
+.dashboard h2 {
+  font-family: var(--font-encabezado);
+  color: var(--accent-blue);
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 0 0 12px rgba(30,144,255,0.6);
+}
+
+/* Secciones CRUD */
+.admin-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  border: 1px solid var(--accent-blue);
+  box-shadow: 0 0 12px rgba(30,144,255,0.3);
+}
+
+.admin-section h3 {
+  font-family: var(--font-encabezado);
+  color: var(--accent-green);
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+/* Botones CRUD */
+.btn {
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: Orbitron, sans-serif;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 0.3rem;
+}
+
+.btn-agregar {
+  background: var(--accent-green);
+  color: #000;
+}
+
+.btn-editar {
+  background: var(--accent-blue);
+  color: #fff;
+}
+
+.btn-eliminar {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(57,255,20,0.7);
+}
+
+/* Tabla de productos */
+.admin-list {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.admin-list th, .admin-list td {
+  border: 1px solid var(--accent-green);
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.admin-list th {
+  background-color: #0b0b0b;
+  color: var(--accent-blue);
+  font-family: var(--font-encabezado);
+}
+
+.admin-list td {
+  background-color: #1a1a1a;
+  color: var(--secondary-text-color);
+}
+
+.admin-list img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--accent-blue);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid var(--accent-blue);
+  width: 450px;
+  max-width: 90%;
+  box-shadow: 0 0 20px rgba(30,144,255,0.5);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Sección de formulario */
+.admin-form {
+  background-color: #1a1a1a;
+  border: 2px solid var(--accent-blue);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 0 15px rgba(30,144,255,0.3);
+}
+
+.admin-form h3 {
+  font-family: var(--font-encabezado);
+  color: var(--accent-green);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--accent-blue);
+  background-color: #0b0b0b;
+  color: var(--primary-text-color);
+  font-size: 1rem;
+}
+
+.admin-form input[type="file"] {
+  border: none;
+  background-color: transparent;
+}
+
+.admin-form button {
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(to right, var(--accent-blue), var(--accent-green));
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.admin-form button:hover {
+  transform: scale(1.05);
+}
+
+/* Lista de productos */
+.product-list {
+  background-color: #1a1a1a;
+  border: 2px solid var(--accent-green);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(57,255,20,0.3);
+}
+
+.product-list h3 {
+  font-family: var(--font-encabezado);
+  color: var(--accent-blue);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b0b0b;
+  border: 1px solid var(--accent-blue);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.product-item span {
+  flex: 1;
+  color: var(--secondary-text-color);
+  font-size: 1rem;
+}
+
+.product-item .actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.product-item button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.product-item .btn-editar {
+  background-color: var(--accent-blue);
+  color: #fff;
+}
+
+.product-item .btn-eliminar {
+  background-color: #ff4d4d;
+  color: #fff;
+}
+
+.product-item button:hover {
+  transform: scale(1.05);
+}
+.product-list {
+  padding: 1rem;
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b0b0b;
+  border: 1px solid var(--accent-blue);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.product-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--accent-green);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-editar {
+  background-color: var(--accent-blue);
+  color: #fff;
+}
+
+.btn-eliminar {
+  background-color: #ff4d4d;
+  color: #fff;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+.logout-btn {
+  background: linear-gradient(to right, var(--accent-blue), var(--accent-green));
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  font-family: Orbitron, sans-serif;
+}
+
+.logout-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(57, 255, 20, 0.5);
+}

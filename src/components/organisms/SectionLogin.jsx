@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
+import { jwtDecode } from 'jwt-decode';
 
 export default function SectionLogin() {
     const navigate = useNavigate();
@@ -16,10 +17,20 @@ export default function SectionLogin() {
         password: password,
       });
 
+      
+      
       const data = res.data; // tu backend devuelve un String
       if (data.token) {
-        alert("Login exitoso");
-        navigate("/"); // redirige a la página principal
+        const decoded = jwtDecode(data.token);
+         console.log("Token decodificado:", decoded);
+        localStorage.setItem("token", data.token);
+        localStorage.setItem("rol", decoded.rol);
+        alert("Login exitoso")
+        if (decoded.rol === 'ADMIN') {
+          navigate("/admin");
+       } else {
+         navigate("/");
+       }
       } else {
         setError(data); // "Credenciales inválidas."
       }
