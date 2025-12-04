@@ -22,7 +22,6 @@ export default function SectionLogin() {
       const data = res.data; // tu backend devuelve un String
       if (data.token) {
         const decoded = jwtDecode(data.token);
-         console.log("Token decodificado:", decoded);
         localStorage.setItem("token", data.token);
         localStorage.setItem("rol", decoded.rol);
         alert("Login exitoso")
