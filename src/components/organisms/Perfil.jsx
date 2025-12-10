@@ -12,7 +12,7 @@ export default function Perfil() {
         alt="Avatar"
         className="perfil-avatar"
       />
-      <div className="perfil-nombre">Arturo</div>
+      <div className="perfil-nombre">{decodedToken.sub}</div>
       <div className="perfil-email">{decodedToken.sub}</div> 
       <div className="perfil-puntos">Puntos: 1200</div> 
     </div>
