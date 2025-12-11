@@ -46,7 +46,7 @@ export default function SectionRegistro() {
           password: password, 
         });
        
-
+        
         if (res.data.Message?.trim().toLowerCase() === "usuario registrado correctamente") {
           alert("Registro exitoso. Por favor, inicia sesión.");   
           navigate("/login")    

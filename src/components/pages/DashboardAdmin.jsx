@@ -1,12 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AgregarProductos from '../organisms/AgregarProductos';
 import ListaProductos from '../organisms/ListaProductos';
 import EditarProductos from '../organisms/EditarProductos';
 import axios from 'axios';
+import { jwtDecode } from 'jwt-decode';
 
 export default function DashboardAdmin() {
   const [refresh, setRefresh] = useState(false);
   const [productoEditar, setProductoEditar] = useState(null);
+  const [isAdmin, setIsAdmin] = useState(true);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      try {
+        const decoded = jwtDecode(token);
+        // Suponiendo que el claim se llama "role"
+        if (decoded.rol !== "ADMIN") {
+          setIsAdmin(false);
+        }
+      } catch (error) {
+        console.error("Error decodificando token:", error);
+        setIsAdmin(false);
+      }
+    } else {
+      setIsAdmin(false);
+    }
+  }, []);
 
   const handleSuccess = () => setRefresh(!refresh);
 
@@ -33,6 +53,15 @@ export default function DashboardAdmin() {
   const handleCloseEdit = () => {
     setProductoEditar(null);
   };
+
+  if (!isAdmin) {
+    return (
+      <div className="error-message">
+        <h2>Acceso denegado</h2>
+        <p>No tienes permisos para acceder al panel de administración.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="dashboard">

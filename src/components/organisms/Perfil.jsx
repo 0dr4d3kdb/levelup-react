@@ -1,9 +1,17 @@
-import React from 'react'
+import React from 'react';
 import { jwtDecode } from "jwt-decode";
 
 export default function Perfil() {
   const token = localStorage.getItem("token");
-  const decodedToken = jwtDecode(token);
+  let decodedToken = null;
+
+  if (token) {
+    try {
+      decodedToken = jwtDecode(token);
+    } catch (error) {
+      console.error("Error decodificando token:", error);
+    }
+  }
 
   return (
     <div className="perfil-container">
@@ -13,8 +21,10 @@ export default function Perfil() {
         className="perfil-avatar"
       />
       <div className="perfil-nombre">Arturo</div>
-      <div className="perfil-email">{decodedToken.sub}</div> 
-      <div className="perfil-puntos">Puntos: 1200</div> 
+      <div className="perfil-email">
+        {decodedToken?.sub ?? "No hay datos que mostrar"}
+      </div>
+      <div className="perfil-puntos">Puntos: 1200</div>
     </div>
   );
 }

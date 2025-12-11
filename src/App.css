@@ -284,7 +284,7 @@ header a {
     padding: 20px;
     border-top: 2px solid var(--accent-green);
     color: var(--secondary-text-color);
-    margin-top: 50px;
+    margin-top: auto;
 }
 /*Login */
 
@@ -1251,4 +1251,15 @@ button.agregar:hover {
 .logout-btn:hover {
   transform: scale(1.05);
   box-shadow: 0px 0px 15px rgba(57, 255, 20, 0.5);
+}
+.error-message {
+  margin: 60px auto;        /* separa el bloque de arriba y abajo */
+  margin-bottom: 240px;
+  padding: 30px;            /* espacio interno para que el texto respire */
+  max-width: 600px;         /* ancho controlado para que no se vea demasiado largo */
+  text-align: center;       /* centra el contenido */
+  background-color: #2a2a2a; /* fondo oscuro estilo futurista */
+  color: #fff;              /* texto claro */
+  border-radius: 8px;       /* esquinas redondeadas */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4); /* sombra para destacar */
 }
