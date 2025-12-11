@@ -27,9 +27,9 @@ export default function SectionLogin() {
         alert("Login exitoso")
         if (decoded.rol === 'ADMIN') {
           navigate("/admin");
-       } else {
-         navigate("/");
-       }
+        } else {
+          navigate("/");
+        }
       } else {
         setError(data); // "Credenciales inválidas."
       }

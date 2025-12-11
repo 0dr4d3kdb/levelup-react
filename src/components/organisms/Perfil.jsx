@@ -22,7 +22,7 @@ export default function Perfil() {
       />
       <div className="perfil-nombre">Arturo</div>
       <div className="perfil-email">
-        {decodedToken?.sub ?? "No hay datos que mostrar"}
+        {decodedToken?.sub ?? "No hay token ni datos que mostrar"}
       </div>
       <div className="perfil-puntos">Puntos: 1200</div>
     </div>
