@@ -41,23 +41,27 @@ export default function SectionRegistro() {
       setLoading(true);
       try {
         const res = await axios.post("http://localhost:8181/api/auth/registro", {
-          nombre: username,   
-          correo: email,     
-          password: password, 
+          nombre: username,
+          correo: email,
+          password: password,
         });
-       
-        
-        if (res.data.Message?.trim().toLowerCase() === "usuario registrado correctamente") {
-          alert("Registro exitoso. Por favor, inicia sesión.");   
-          navigate("/login")    
+
+        if (res.data.success) {
+          alert(res.data.message);   // "Usuario registrado correctamente"
+          navigate("/login");
         } else {
-          alert(res.data.Message || "Error en el registro");
+          alert(res.data.message || "Error en el registro");
         }
       } catch (error) {
-        console.error("Error en el registro:", error);
+        if (error.response?.status === 409) {
+          alert(error.response.data.message || "El usuario ya existe");
+        } else {
+          alert("Error en el registro");
+        }
       } finally {
         setLoading(false);
       }
+
     }
   };
 
